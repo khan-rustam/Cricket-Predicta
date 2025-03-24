@@ -90,7 +90,7 @@ export function HeroSection() {
         </div>
 
         <div className="relative order-1 lg:order-2 animate-fade-in">
-          <div className="relative h-[400px] md:h-[500px] w-full max-w-md mx-auto">
+          <div className="relative h-[400px] md:h-[500px] w-full max-w-md mx-auto hidden sm:block">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent rounded-2xl -z-10 transform rotate-3 scale-95"></div>
             <Image
               // src={logo}
