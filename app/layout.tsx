@@ -168,9 +168,23 @@ export default function RootLayout({
             }
           })
         }} />
+        <style>{`
+          :root {
+            --primary-color: #3b82f6;
+            --primary-color-light: #60a5fa;
+            --primary-color-dark: #2563eb;
+            --primary-color-hover: #1d4ed8;
+          }
+          .dark {
+            --primary-color-light: #3b82f6;
+            --primary-color: #2563eb;
+            --primary-color-dark: #1d4ed8;
+            --primary-color-hover: #1e40af;
+          }
+        `}</style>
       </head>
-      <body className={inter.className}>
-        <ThemeProviderClient attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+      <body className={`${inter.className} overflow-x-hidden`}>
+        <ThemeProviderClient attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <header id="header" role="banner">
               {/* Header content will go here */}

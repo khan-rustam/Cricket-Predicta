@@ -9,7 +9,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -31,6 +31,15 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 24 100% 50%;
     --radius: 0.5rem;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+
+    /* Primary color variables for scrollbar and other UI elements */
+    --primary-color: #3b82f6; /* blue-500 - assuming this is the primary color */
+    --primary-color-light: #60a5fa; /* blue-400 */
+    --primary-color-dark: #2563eb; /* blue-600 */
+    --primary-color-hover: #1d4ed8; /* blue-700 */
   }
 
   .dark {
@@ -54,6 +63,20 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 24 100% 50%;
   }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+
+      /* Adjust primary color variables for dark mode */
+      --primary-color-light: #3b82f6; /* blue-500 */
+      --primary-color: #2563eb; /* blue-600 */
+      --primary-color-dark: #1d4ed8; /* blue-700 */
+      --primary-color-hover: #1e40af; /* blue-800 */
+    }
+  }
 }
 
 @layer base {
@@ -75,3 +98,65 @@
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+/* Global Scrollbar Styles */
+/* Webkit browsers (Chrome, Safari, newer Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+  margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--primary-color-light)
+  );
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color-hover),
+    var(--primary-color)
+  );
+  border-width: 1px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+/* Dark mode scrollbar adjustments */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      var(--primary-color),
+      var(--primary-color-dark)
+    );
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      var(--primary-color-hover),
+      var(--primary-color)
+    );
+  }
+}

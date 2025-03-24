@@ -1,3 +1,5 @@
+"use client";
+
 import { User } from "lucide-react";
 
 // Define guest type interface
@@ -317,11 +319,15 @@ const GuestCard = ({ guest, index }: { guest: GuestData; index: number }) => (
       <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
         <User className="h-5 w-5 sm:h-6 sm:w-6" />
       </div>
-      <h4 className="text-base sm:text-lg font-semibold line-clamp-1">{guest.name}</h4>
+      <h4 className="text-base sm:text-lg font-semibold line-clamp-1">
+        {guest.name}
+      </h4>
     </div>
 
     <div className="pl-14 sm:pl-16 -mt-2">
-      <p className="text-xs sm:text-sm text-primary/80 font-medium mb-2">{guest.title}</p>
+      <p className="text-xs sm:text-sm text-primary/80 font-medium mb-2">
+        {guest.title}
+      </p>
       <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
         {guest.description}
       </p>
@@ -339,12 +345,13 @@ const FormerCricketerCard = ({
 }) => (
   <div
     key={index}
-    className="bg-white dark:bg-slate-800 rounded-lg p-5 border border-slate-200/30 dark:border-slate-700/20 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-4px]"
-  >    
+    className="bg-white dark:bg-slate-800 rounded-lg p-5 border border-slate-200/30 dark:border-slate-700/20 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-4px] relative overflow-hidden"
+  >
+    <div className="absolute top-0 right-0 h-20 w-20 bg-primary/5 rounded-bl-full"></div>
     <h4 className="text-lg font-semibold mb-1">{guest.name}</h4>
-    
+
     <p className="text-sm text-primary font-medium mb-2">{guest.title}</p>
-    
+
     <p className="text-slate-600 dark:text-slate-300 text-sm">
       {guest.description}
     </p>
@@ -358,7 +365,7 @@ export function GuestSection() {
   return (
     <section
       id="guest"
-      className="py-12 sm:py-16 md:py-24 relative bg-slate-50 dark:bg-slate-900/50"
+      className="py-0 relative bg-slate-50 dark:bg-slate-900/50 min-h-screen flex flex-col"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
@@ -366,89 +373,103 @@ export function GuestSection() {
         <div className="absolute bottom-0 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-primary/10 rounded-full filter blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="inline-block px-3 py-1 bg-primary/10 rounded-full backdrop-blur-sm mb-3 sm:mb-4">
-              <span className="text-primary text-xs sm:text-sm font-medium uppercase tracking-wider">
-                OUR GUESTS
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
-              Who Appeared on{" "}
-              <span className="text-primary">Cricket Predicta</span> in 2024?
-            </h2>
-            <div className="h-1 w-16 sm:w-20 bg-primary mx-auto mb-4 sm:mb-6"></div>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto text-sm sm:text-base">
-              Cricket Legends, Former Cricketers, Skippers, Coaches, Experts,
-              Analysts, Umpires, Commentators, Broadcasters & Journalists Who
-              Appeared on Our Show till date
-            </p>
-          </div>
-
-          {/* Legendary Cricketers section */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
-              Legendary Cricketers
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {legendaryGuests.map((guest, index) => (
-                <GuestCard guest={guest} index={index} key={index} />
-              ))}
+      {/* Sticky Header */}
+      <div className="sticky top-0 z-30 py-8 sm:py-10 md:py-12 bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200/20 dark:border-slate-700/20 shadow-sm">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block px-3 py-1 bg-primary/10 rounded-full backdrop-blur-sm mb-3 sm:mb-4">
+                <span className="text-primary text-xs sm:text-sm font-medium uppercase tracking-wider">
+                  OUR GUESTS
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+                Who Appeared on{" "}
+                <span className="text-primary">Cricket Predicta</span> in 2024?
+              </h2>
+              <div className="h-1 w-16 sm:w-20 bg-primary mx-auto mb-4 sm:mb-6"></div>
+              <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto text-sm sm:text-base">
+                Cricket Legends, Former Cricketers, Skippers, Coaches, Experts,
+                Analysts, Umpires, Commentators, Broadcasters & Journalists Who
+                Appeared on Our Show till date
+              </p>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Former Cricketers & Skippers section */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-primary relative">
-              Former Cricketers & Skippers
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-40 bg-primary/40 rounded-full"></div>
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-              {formerCricketers.map((guest, index) => (
-                <FormerCricketerCard guest={guest} index={index} key={index} />
-              ))}
+      {/* Scrollable Content with Custom Scrollbar */}
+      <div className="flex-1 overflow-auto py-8 sm:py-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
+          <div className="max-w-6xl mx-auto">
+            {/* Legendary Cricketers section */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
+                Legendary Cricketers
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
+              </h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                {legendaryGuests.map((guest, index) => (
+                  <GuestCard guest={guest} index={index} key={index} />
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Coaches section */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
-              Coaches
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {coaches.map((guest, index) => (
-                <GuestCard guest={guest} index={index} key={index} />
-              ))}
+            {/* Former Cricketers & Skippers section */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-primary relative">
+                Former Cricketers & Skippers
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-40 bg-primary/40 rounded-full"></div>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                {formerCricketers.map((guest, index) => (
+                  <FormerCricketerCard
+                    guest={guest}
+                    index={index}
+                    key={index}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Cricket Experts, Analysts & Umpires section */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
-              Cricket Experts, Analysts & Umpires
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {cricketExperts.map((guest, index) => (
-                <GuestCard guest={guest} index={index} key={index} />
-              ))}
+            {/* Coaches section */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
+                Coaches
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                {coaches.map((guest, index) => (
+                  <GuestCard guest={guest} index={index} key={index} />
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Commentators and Broadcasters section */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
-              Commentators and Broadcasters
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {commentators.map((guest, index) => (
-                <GuestCard guest={guest} index={index} key={index} />
-              ))}
+            {/* Cricket Experts, Analysts & Umpires section */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
+                Cricket Experts, Analysts & Umpires
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                {cricketExperts.map((guest, index) => (
+                  <GuestCard guest={guest} index={index} key={index} />
+                ))}
+              </div>
+            </div>
+
+            {/* Commentators and Broadcasters section */}
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
+                Commentators and Broadcasters
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                {commentators.map((guest, index) => (
+                  <GuestCard guest={guest} index={index} key={index} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
