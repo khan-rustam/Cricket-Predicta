@@ -1,0 +1,12 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://cricketpredicta.com/sitemap.xml
+
+# Disallow certain directories
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/ 
