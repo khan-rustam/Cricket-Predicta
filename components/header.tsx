@@ -71,10 +71,10 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6">
           <Link 
             href="#home" 
-            className="text-base lg:text-lg font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
+            className="text-sm lg:text-base font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
           >
             Home
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -82,33 +82,41 @@ export function Header() {
           </Link>
           <Link 
             href="#about" 
-            className="text-base lg:text-lg font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
+            className="text-sm lg:text-base font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
           >
-            About
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            <span className="absolute top-0 right-0 w-0 h-0.5 bg-primary/30 transition-all duration-300 group-hover:w-full delay-75"></span>
-          </Link>
-          <Link 
-            href="#team" 
-            className="text-base lg:text-lg font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
-          >
-            Team
+            About 
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             <span className="absolute top-0 right-0 w-0 h-0.5 bg-primary/30 transition-all duration-300 group-hover:w-full delay-75"></span>
           </Link>
           <Link 
             href="#broadcast" 
-            className="text-base lg:text-lg font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
+            className="text-sm lg:text-base font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
           >
-            Broadcast
+            Past Projects 
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             <span className="absolute top-0 right-0 w-0 h-0.5 bg-primary/30 transition-all duration-300 group-hover:w-full delay-75"></span>
           </Link>
           <Link 
-            href="#requirements" 
-            className="text-base lg:text-lg font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
+            href="#gallery" 
+            className="text-sm lg:text-base font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
           >
-            Requirements
+            Gallery
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute top-0 right-0 w-0 h-0.5 bg-primary/30 transition-all duration-300 group-hover:w-full delay-75"></span>
+          </Link>
+          <Link 
+            href="#team" 
+            className="text-sm lg:text-base font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
+          >
+            Our Team
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute top-0 right-0 w-0 h-0.5 bg-primary/30 transition-all duration-300 group-hover:w-full delay-75"></span>
+          </Link>
+          <Link 
+            href="#contact" 
+            className="text-sm lg:text-base font-medium tracking-wide hover:text-primary transition-colors relative group overflow-hidden"
+          >
+            Contact
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             <span className="absolute top-0 right-0 w-0 h-0.5 bg-primary/30 transition-all duration-300 group-hover:w-full delay-75"></span>
           </Link>
@@ -125,7 +133,7 @@ export function Header() {
             } transition-all duration-300 font-medium tracking-wide`}
             onClick={() => window.location.href = "#contact"}
           >
-            <span className="relative z-10">Contact Us</span>
+            <span className="relative z-10">CONTACT US</span>
             <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
           </Button>
 
@@ -164,7 +172,23 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="h-1.5 w-1.5 bg-primary/40 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              About
+              ABOUT US
+            </Link>
+            <Link 
+              href="#projects" 
+              className="text-lg font-medium hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center" 
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span className="h-1.5 w-1.5 bg-primary/40 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              PAST PROJECTS
+            </Link>
+            <Link 
+              href="#gallery" 
+              className="text-lg font-medium hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center" 
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span className="h-1.5 w-1.5 bg-primary/40 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              GALLERY
             </Link>
             <Link 
               href="#team" 
@@ -172,7 +196,15 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="h-1.5 w-1.5 bg-primary/40 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Team
+              OUR TEAM
+            </Link>
+            <Link 
+              href="#press" 
+              className="text-lg font-medium hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center" 
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span className="h-1.5 w-1.5 bg-primary/40 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              PRESS RELEASE
             </Link>
             <Link 
               href="#broadcast" 
@@ -182,14 +214,6 @@ export function Header() {
               <span className="h-1.5 w-1.5 bg-primary/40 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
               Broadcast
             </Link>
-            <Link 
-              href="#requirements" 
-              className="text-lg font-medium hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center" 
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <span className="h-1.5 w-1.5 bg-primary/40 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Requirements
-            </Link>
             {/* Mobile Contact Button (alternative placement) */}
             <Button 
               className="mt-2 w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white relative overflow-hidden group font-medium tracking-wide"
@@ -198,7 +222,7 @@ export function Header() {
                 window.location.href = "#contact";
               }}
             >
-              <span className="relative z-10">Contact Us</span>
+              <span className="relative z-10">CONTACT US</span>
               <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
             </Button>
           </nav>

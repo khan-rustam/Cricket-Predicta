@@ -1,11 +1,56 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Globe, Tv, BarChart3 } from "lucide-react";
+import { useCountUp } from "@/app/hooks/use-count-up";
+import { useState, useEffect, useRef } from "react";
 
 /**
  * About section describing the Cricket Predicta platform
  * Includes descriptive content and statistics
  */
 export function AboutSection() {
+  // Count up hooks for statistics
+  const viewersCount = useCountUp({ 
+    end: 250, 
+    duration: 2500, 
+    suffix: "M+" 
+  });
+  
+  const accuracyCount = useCountUp({ 
+    end: 98, 
+    duration: 2000, 
+    suffix: "%",
+    delay: 300
+  });
+
+  // Animation for stats container
+  const statsContainerRef = useRef<HTMLDivElement>(null);
+  const [isStatsVisible, setIsStatsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        setIsStatsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    const currentRef = statsContainerRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
     <section id="about" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90 -z-10"></div>
@@ -136,18 +181,27 @@ export function AboutSection() {
             </div>
 
             {/* Stats counter */}
-            <div className="bg-background/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 shadow-lg mt-6 relative overflow-hidden">
+            <div 
+              ref={statsContainerRef} 
+              className={`bg-background/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 shadow-lg mt-6 relative overflow-hidden transition-all duration-700 ${
+                isStatsVisible ? "transform-none opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+            >
               <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/10 rounded-full filter blur-xl"></div>
               <h3 className="text-xl font-semibold mb-4">Our Impact</h3>
               <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <p className="text-3xl font-bold text-primary">250M+</p>
+                <div className={`transition-all duration-500 delay-100 ${isStatsVisible ? "transform-none opacity-100" : "opacity-0 -translate-y-4"}`}>
+                  <p ref={viewersCount.ref as React.RefObject<HTMLParagraphElement>} className="text-3xl font-bold text-primary">
+                    {viewersCount.displayValue}
+                  </p>
                   <p className="text-sm text-muted-foreground">
                     Monthly Viewers
                   </p>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold text-primary">98%</p>
+                <div className={`transition-all duration-500 delay-300 ${isStatsVisible ? "transform-none opacity-100" : "opacity-0 -translate-y-4"}`}>
+                  <p ref={accuracyCount.ref as React.RefObject<HTMLParagraphElement>} className="text-3xl font-bold text-primary">
+                    {accuracyCount.displayValue}
+                  </p>
                   <p className="text-sm text-muted-foreground">
                     Prediction Accuracy
                   </p>

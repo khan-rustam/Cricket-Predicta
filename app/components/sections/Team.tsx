@@ -132,12 +132,12 @@ export function TeamSection() {
                   </div>
                 </div>
 
-                <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed">
+                <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed text-justify">
                   The visionary behind Cricket Predicta is{" "}
                   <a
                     href="https://www.linkedin.com/in/sunil-yash-kalra-4a6a7214/?originalSubdomain=in"
                     target="_blank"
-                    className="text-primary hover:text-primary/80"
+                    className="text-primary hover:text-primary/80 "
                   >
                     Sunil Yash Kalra
                   </a>
@@ -259,7 +259,7 @@ export function TeamSection() {
                   </div>
                 </div>
 
-                <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed">
+                <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed text-justify">
                   The Co Host of the Show Mr. Ayaz Memon is a renowned Indian
                   sports journalist, author, and former lawyer. Starting his
                   career with Sportsweek in 1978, he went on to edit prominent

@@ -1,28 +1,118 @@
+"use client"
+
 import { Tv } from "lucide-react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 /**
  * Broadcast section showing where Cricket Predicta will be on air
  */
 export function BroadcastSection() {
   const channels = [
-    "News X",
-    "India News",
-    "Saam TV",
-    "APN News",
-    "News Time Bangla",
-    "Kolkata TV",
-    "Protidin Times",
-    "Living India News",
-    "MH one news",
-    "Bharat 24",
-    "ANB News",
-    "TV 27 News",
-    "India News Rajasthan",
-    "India News Gujarat",
-    "India News J&K",
-    "India News Haryana",
-    "India News Punjab",
+    {
+      name: "News X",
+      logo: "/Brands/News X.png",
+      hasLogo: true,
+    },
+    {
+      name: "India News",
+      logo: "/Brands/India News.png",
+      hasLogo: true,
+    },
+    {
+      name: "Saam TV",
+      logo: "/Brands/Saam TV.png",
+      hasLogo: true,
+    },
+    {
+      name: "APN News",
+      logo: "/Brands/APN News.png",
+      hasLogo: true,
+    },
+    {
+      name: "News Time Bangla",
+      logo: "",
+      hasLogo: false,
+    },
+    {
+      name: "Kolkata TV",
+      logo: "/Brands/Kolkata TV.jpg",
+      hasLogo: true,
+    },
+    {
+      name: "Protidin Times",
+      logo: "",
+      hasLogo: false,
+    },
+    {
+      name: "Living India News",
+      logo: "/Brands/Living India News.png",
+      hasLogo: true,
+    },
+    {
+      name: "MH one news",
+      logo: "",
+      hasLogo: false,
+    },
+    {
+      name: "Bharat 24",
+      logo: "",
+      hasLogo: false,
+    },
+    {
+      name: "ANB News",
+      logo: "",
+      hasLogo: false,
+    },
+    {
+      name: "TV 27 News",
+      logo: "",
+      hasLogo: false,
+    },
+    {
+      name: "India News Rajasthan",
+      logo: "/Brands/India News Rajasthan.jpg",
+      hasLogo: true,
+    },
+    {
+      name: "India News Gujarat",
+      logo: "/Brands/India News Gujarat.jpg",
+      hasLogo: true,
+    },
+    {
+      name: "India News J&K",
+      logo: "/Brands/India News J&K.jpg",
+      hasLogo: true,
+    },
+    {
+      name: "India News Haryana",
+      logo: "/Brands/India News Haryana.jpg",
+      hasLogo: true,
+    },
+    {
+      name: "India News Punjab",
+      logo: "/Brands/India News Punjab.jpg",
+      hasLogo: true,
+    },
   ];
+
+  // Animation for channel cards
+  const [visibleChannels, setVisibleChannels] = useState<boolean[]>([]);
+
+  useEffect(() => {
+    // Staggered animation effect with a small delay between each card
+    const showChannels = async () => {
+      const newVisibleChannels = [...visibleChannels];
+      for (let i = 0; i < channels.length; i++) {
+        await new Promise((resolve) => setTimeout(resolve, 100));
+        newVisibleChannels[i] = true;
+        setVisibleChannels([...newVisibleChannels]);
+      }
+    };
+
+    showChannels();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section id="broadcast" className="py-16 md:py-24 relative">
@@ -45,21 +135,56 @@ export function BroadcastSection() {
             </h2>
             <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              22 mins of broadcast on the following channels
+              Catch the action across our broadcast partners.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
             {channels.map((channel, index) => (
-              <div key={index} className="relative group overflow-hidden">
-                <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200/50 dark:border-slate-700/30 transition-all duration-300 hover:bg-primary/5 hover:border-primary/20 hover:shadow-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="font-bold text-primary">
-                        {index + 1}
+              <div 
+                key={index} 
+                className={`relative group overflow-hidden transition-all duration-500 ${
+                  visibleChannels[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${index * 50}ms` }}
+              >
+                <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200/50 dark:border-slate-700/30 transition-all duration-300 hover:bg-primary/5 hover:border-primary/20 hover:shadow-lg flex flex-col h-full">
+                  <div className="mb-3 h-6">
+                    <div className="flex items-center justify-between">
+                      <div className="h-6 w-6 bg-primary/10 rounded-full flex items-center justify-center">
+                        <span className="font-bold text-primary text-xs">
+                          {index + 1}
+                        </span>
+                      </div>
+                      <span className="text-xs text-muted-foreground px-2 py-1 bg-muted/50 rounded-full">
+                        Partner
                       </span>
                     </div>
-                    <h3 className="text-lg font-medium">{channel}</h3>
+                  </div>
+                  
+                  {/* Logo area */}
+                  <div className="flex-1 flex items-center justify-center py-3 px-2 bg-white/30 dark:bg-slate-900/30 rounded-lg">
+                    {channel.hasLogo ? (
+                      <div className="relative w-full h-24 flex items-center justify-center">
+                        <Image
+                          src={channel.logo}
+                          alt={`${channel.name} logo`}
+                          width={180}
+                          height={80}
+                          className="object-contain max-h-24"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-full h-24 bg-gradient-to-r from-slate-100/50 to-slate-200/50 dark:from-slate-800/50 dark:to-slate-700/50 rounded-lg flex flex-col items-center justify-center">
+                        <Tv className="h-8 w-8 text-primary/40 mb-2" />
+                        <span className="text-xs text-muted-foreground">Logo coming soon</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Channel name */}
+                  <div className="mt-3 text-center">
+                    <h3 className="text-lg font-medium">{channel.name}</h3>
                   </div>
                 </div>
                 {/* Decorative effect */}
