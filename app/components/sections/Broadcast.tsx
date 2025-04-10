@@ -148,22 +148,9 @@ export function BroadcastSection() {
                 }`}
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
-                <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200/50 dark:border-slate-700/30 transition-all duration-300 hover:bg-primary/5 hover:border-primary/20 hover:shadow-lg flex flex-col h-full">
-                  <div className="mb-3 h-6">
-                    <div className="flex items-center justify-between">
-                      <div className="h-6 w-6 bg-primary/10 rounded-full flex items-center justify-center">
-                        <span className="font-bold text-primary text-xs">
-                          {index + 1}
-                        </span>
-                      </div>
-                      <span className="text-xs text-muted-foreground px-2 py-1 bg-muted/50 rounded-full">
-                        Partner
-                      </span>
-                    </div>
-                  </div>
-                  
+                <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-xl transition-all duration-300 hover:scale-105 flex flex-col h-full">
                   {/* Logo area */}
-                  <div className="flex-1 flex items-center justify-center py-3 px-2 bg-white/30 dark:bg-slate-900/30 rounded-lg">
+                  <div className="flex-1 flex items-center justify-center py-3 px-2 rounded-lg">
                     {channel.hasLogo ? (
                       <div className="relative w-full h-24 flex items-center justify-center">
                         <Image
@@ -175,7 +162,7 @@ export function BroadcastSection() {
                         />
                       </div>
                     ) : (
-                      <div className="w-full h-24 bg-gradient-to-r from-slate-100/50 to-slate-200/50 dark:from-slate-800/50 dark:to-slate-700/50 rounded-lg flex flex-col items-center justify-center">
+                      <div className="w-full h-24 flex flex-col items-center justify-center">
                         <Tv className="h-8 w-8 text-primary/40 mb-2" />
                         <span className="text-xs text-muted-foreground">Logo coming soon</span>
                       </div>

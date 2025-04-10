@@ -97,7 +97,7 @@ export function TeamSection() {
               </div>
 
               <div className="md:col-span-7 p-6 md:p-8 relative">
-                <div className="absolute top-0 right-0 -mt-10 mr-6 bg-white dark:bg-slate-800 rounded-full p-2 shadow-lg border border-slate-200 dark:border-slate-700/60">
+                {/* <div className="absolute top-0 right-0 -mt-10 mr-6 bg-white dark:bg-slate-800 rounded-full p-2 shadow-lg border border-slate-200 dark:border-slate-700/60">
                   <div className="flex gap-1">
                     <a
                       href="#"
@@ -130,7 +130,7 @@ export function TeamSection() {
                       </svg>
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed text-justify">
                   The visionary behind Cricket Predicta is{" "}
@@ -219,7 +219,7 @@ export function TeamSection() {
               </div>
 
               <div className="md:col-span-7 p-6 md:p-8 relative">
-                <div className="absolute top-0 right-0 -mt-10 mr-6 bg-white dark:bg-slate-800 rounded-full p-2 shadow-lg border border-slate-200 dark:border-slate-700/60">
+                {/* <div className="absolute top-0 right-0 -mt-10 mr-6 bg-white dark:bg-slate-800 rounded-full p-2 shadow-lg border border-slate-200 dark:border-slate-700/60">
                   <div className="flex gap-1">
                     <a
                       href="#"
@@ -257,7 +257,7 @@ export function TeamSection() {
                       </svg>
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed text-justify">
                   The Co Host of the Show Mr. Ayaz Memon is a renowned Indian

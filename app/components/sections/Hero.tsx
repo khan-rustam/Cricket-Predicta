@@ -23,6 +23,13 @@ export function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Set video playback speed when the component mounts
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.75; // Set speed to 0.75x (75% of normal speed)
+    }
+  }, []);
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
@@ -33,29 +40,31 @@ export function HeroSection() {
   return (
     <>
       {/* Full-width video hero section */}
-      <section id="home" className="relative w-full h-[100vh] overflow-hidden">
-        {/* Promotional video */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="/Home.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+      <section id="home" className="relative w-full h-[50vh] sm:h-[90vh] md:h-[100vh] overflow-hidden">
+        {/* Video container with fixed aspect ratio to ensure full visibility */}
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-black">
+          <div className="relative w-full h-full">
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-contain"
+            >
+              <source src="/Home.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
           
           {/* Dark overlay for better text visibility */}
           <div className="absolute inset-0 bg-black/40 z-10"></div>
         </div>
 
         {/* Content overlay */}
-        <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 relative z-20 h-full flex flex-col justify-center">
-          <div className="max-w-full md:max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold animate-fade-in mb-4 sm:mb-6 md:mb-8 text-white">
+        {/* <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 relative z-20 h-full flex flex-col justify-center">
+          <div className="max-w-full md:max-w-4xl"> */}
+            {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold animate-fade-in mb-4 sm:mb-6 md:mb-8 text-white">
               Cricket{" "}
               <span className="text-primary animate-text-glow">Predicta</span>
             </h1>
@@ -63,10 +72,10 @@ export function HeroSection() {
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 animate-slide-up max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl mb-6 sm:mb-8 md:mb-10">
               Your ultimate destination for cricket predictions, analysis, and
               insights powered by advanced statistics.
-            </p>
+            </p> */}
 
             {/* Stats Display - smaller and more transparent */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-10 max-w-full sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
+            {/* <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-10 max-w-full sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
               <div className="bg-black/20 backdrop-blur-sm p-2 sm:p-3 md:p-4 rounded-lg md:rounded-xl border border-white/10 text-center">
                 <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-0 md:mb-1">100+</p>
                 <p className="text-xs sm:text-sm md:text-base text-gray-300">Matches Analyzed</p>
@@ -79,9 +88,9 @@ export function HeroSection() {
                 <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-0 md:mb-1">4.8</p>
                 <p className="text-xs sm:text-sm md:text-base text-gray-300">User Rating</p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 animate-fade-in-delay-2">
+            {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 animate-fade-in-delay-2">
               <Button
                 size="default"
                 className="rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-base sm:text-lg group bg-primary hover:bg-primary/90 w-full sm:w-auto"
@@ -97,8 +106,8 @@ export function HeroSection() {
                 Learn More
               </Button>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         {/* Video controls */}
         <button 

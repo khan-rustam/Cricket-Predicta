@@ -45,26 +45,26 @@ export function Header() {
             <Image 
               src="/images/logo.png" 
               alt="Cricket Predicta Logo" 
-              width={scrolled ? 40 : 52} 
-              height={scrolled ? 40 : 52} 
+              width={scrolled ? 55 : 70} 
+              height={scrolled ? 55 : 70} 
               className="object-contain transition-all duration-300"
               priority
             />
             <div className="absolute inset-0 bg-primary/10 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div className="relative">
-            <span className={`font-extrabold tracking-tight transition-all duration-300 inline-block ${
+            <span className={`font-black tracking-tight transition-all duration-300 inline-block ${
               scrolled 
-                ? "text-xl md:text-2xl" 
-                : "text-2xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-primary to-purple-600 dark:from-blue-400 dark:via-primary dark:to-purple-400"
+                ? "text-2xl md:text-3xl" 
+                : "text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-primary to-purple-600 dark:from-blue-400 dark:via-primary dark:to-purple-400"
             }`}>
               Cricket 
-              <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500 dark:from-primary dark:to-yellow-400">
+              <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500 dark:from-primary dark:to-yellow-400 font-black">
                 Predicta
               </span>
             </span>
             {!scrolled && (
-              <span className="absolute -bottom-1 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary/40 to-transparent"></span>
+              <span className="absolute -bottom-1 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></span>
             )}
             <div className={`absolute -inset-1 bg-primary/5 blur-lg rounded-full opacity-0 group-hover:opacity-70 transition-opacity duration-300 ${scrolled ? 'hidden' : ''}`}></div>
           </div>
@@ -231,4 +231,3 @@ export function Header() {
     </header>
   )
 }
-
