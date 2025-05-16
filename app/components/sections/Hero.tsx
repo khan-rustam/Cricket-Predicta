@@ -53,18 +53,11 @@ export function HeroSection() {
               playsInline
               poster={logo.src}
               preload="metadata"
-              className="hidden md:block absolute inset-0 w-full h-full object-cover md:object-cover lg:object-cover xl:object-cover"
+              className="block absolute inset-0 w-full h-full object-cover max-h-[320px] md:max-h-full mx-auto my-auto"
             >
               <source src="/Home.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            {/* Static image for mobile */}
-            <img
-              src={logo.src}
-              alt="Cricket Predicta Promo"
-              className="block md:hidden absolute inset-0 w-full h-full object-contain bg-black"
-              style={{ aspectRatio: '16/9', objectFit: 'contain' }}
-            />
           </div>
           
           {/* Dark overlay for better text visibility */}
