@@ -279,7 +279,7 @@ export function ContactSection() {
                   name="subject"
                   value={formState.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700/50 text-slate-800 dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-800 dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition"
                 >
                   <option value="">Please select</option>
                   <option value="general">General Inquiry</option>

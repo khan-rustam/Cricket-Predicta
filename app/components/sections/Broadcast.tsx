@@ -150,19 +150,19 @@ export function BroadcastSection() {
               >
                 <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-xl transition-all duration-300 hover:scale-105 flex flex-col h-full">
                   {/* Logo area */}
-                  <div className="flex-1 flex items-center justify-center py-3 px-2 rounded-lg">
+                  <div className="flex-1 flex items-center justify-center py-3 px-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm">
                     {channel.hasLogo ? (
-                      <div className="relative w-full h-24 flex items-center justify-center">
+                      <div className="relative w-[120px] h-[60px] flex items-center justify-center">
                         <Image
                           src={channel.logo}
                           alt={`${channel.name} logo`}
-                          width={180}
-                          height={80}
-                          className="object-contain max-h-24"
+                          width={120}
+                          height={60}
+                          className="object-contain w-[120px] h-[60px]"
                         />
                       </div>
                     ) : (
-                      <div className="w-full h-24 flex flex-col items-center justify-center">
+                      <div className="w-[120px] h-[60px] flex flex-col items-center justify-center">
                         <Tv className="h-8 w-8 text-primary/40 mb-2" />
                         <span className="text-xs text-muted-foreground">Logo coming soon</span>
                       </div>

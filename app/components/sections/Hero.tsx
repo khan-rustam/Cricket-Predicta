@@ -44,17 +44,27 @@ export function HeroSection() {
         {/* Video container with fixed aspect ratio to ensure full visibility */}
         <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-black">
           <div className="relative w-full h-full">
+            {/* Show video on md+ screens, image on mobile */}
             <video
               ref={videoRef}
               autoPlay
               loop
               muted
               playsInline
-              className="absolute inset-0 w-full h-full object-contain"
+              poster={logo.src}
+              preload="metadata"
+              className="hidden md:block absolute inset-0 w-full h-full object-cover md:object-cover lg:object-cover xl:object-cover"
             >
               <source src="/Home.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            {/* Static image for mobile */}
+            <img
+              src={logo.src}
+              alt="Cricket Predicta Promo"
+              className="block md:hidden absolute inset-0 w-full h-full object-contain bg-black"
+              style={{ aspectRatio: '16/9', objectFit: 'contain' }}
+            />
           </div>
           
           {/* Dark overlay for better text visibility */}

@@ -402,19 +402,7 @@ export function GuestSection() {
       <div className="flex-1 overflow-auto py-8 sm:py-10">
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
           <div className="max-w-6xl mx-auto">
-            {/* Legendary Cricketers section */}
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent relative">
-                Legendary Cricketers
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 sm:w-20 bg-primary/20 rounded-full"></div>
-              </h3>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                {legendaryGuests.map((guest, index) => (
-                  <GuestCard guest={guest} index={index} key={index} />
-                ))}
-              </div>
-            </div>
+           
 
             {/* Former Cricketers & Skippers section */}
             <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">

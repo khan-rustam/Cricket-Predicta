@@ -1,6 +1,6 @@
 import type React from "react"
 import "@/app/globals.css"
-import { Inter } from "next/font/google"
+import { Roboto } from "next/font/google"
 import type { Metadata, Viewport } from "next"
 import { ThemeProviderClient } from "@/components/theme-provider-client"
 import favicon from "@/public/favicon.ico"
@@ -12,10 +12,10 @@ import androidChrome512 from "@/public/android-chrome-512x512.png"
 import logo from "@/public/images/logo.png"
 
 
-const inter = Inter({ 
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap'
+  weight: ["400", "500", "700"],
+  display: "swap"
 })
 
 export const viewport: Viewport = {
@@ -183,7 +183,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className={`${inter.className} overflow-x-hidden`}>
+      <body className={`${roboto.className} overflow-x-hidden`}>
         <ThemeProviderClient attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <header id="header" role="banner">

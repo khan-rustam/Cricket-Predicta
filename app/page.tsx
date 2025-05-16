@@ -1,8 +1,9 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { HeroSection, AboutSection, TeamSection, BroadcastSection, RequirementsSection, ContactSection } from "./components/sections"
+import { HeroSection, AboutSection, TeamSection, BroadcastSection, RequirementsSection, ContactSection, OutcomeDeliveredSection, ClientsPartnersSection, LegendaryCricketersSection } from "./components/sections"
 import { AnimatedBackground } from "./components/AnimatedBackground"
 import { GuestSection } from "./components/sections/Guest"
+import Head from "next/head"
 
 /**
  * Main page component for Cricket Predicta
@@ -11,6 +12,15 @@ import { GuestSection } from "./components/sections/Guest"
 export default function Home() {
   return (
     <div className="min-h-screen relative">
+      <Head>
+        <link
+          rel="preload"
+          href="/Home.mp4"
+          as="video"
+          type="video/mp4"
+          crossOrigin="anonymous"
+        />
+      </Head>
       {/* Animated background */}
       <AnimatedBackground />
 
@@ -25,6 +35,15 @@ export default function Home() {
         
         {/* Team Section */}
         <TeamSection />
+        
+        {/* Legendary Cricketers Section */}
+        <LegendaryCricketersSection />
+        
+        {/* Outcome Delivered Section */}
+        <OutcomeDeliveredSection />
+        
+        {/* Clients & Partners Section */}
+        <ClientsPartnersSection />
         
         {/* Broadcast Section */}
         <BroadcastSection />
