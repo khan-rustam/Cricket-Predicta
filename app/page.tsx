@@ -1,9 +1,19 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { HeroSection, AboutSection, TeamSection, BroadcastSection, RequirementsSection, ContactSection, OutcomeDeliveredSection, ClientsPartnersSection, LegendaryCricketersSection } from "./components/sections"
-import { AnimatedBackground } from "./components/AnimatedBackground"
-import { GuestSection } from "./components/sections/Guest"
-import Head from "next/head"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import {
+  HeroSection,
+  AboutSection,
+  TeamSection,
+  BroadcastSection,
+  RequirementsSection,
+  ContactSection,
+  OutcomeDeliveredSection,
+  ClientsPartnersSection,
+  LegendaryCricketersSection,
+} from "./components/sections";
+import { AnimatedBackground } from "./components/AnimatedBackground";
+import { GuestSection } from "./components/sections/Guest";
+import Head from "next/head";
 
 /**
  * Main page component for Cricket Predicta
@@ -32,34 +42,33 @@ export default function Home() {
 
         {/* About Section */}
         <AboutSection />
-        
+
         {/* Team Section */}
-        <TeamSection />
-        
+        {/* <TeamSection /> */}
+
         {/* Legendary Cricketers Section */}
         <LegendaryCricketersSection />
-        
+
         {/* Outcome Delivered Section */}
         <OutcomeDeliveredSection />
-        
+
         {/* Clients & Partners Section */}
-        <ClientsPartnersSection />
-        
+        {/* <ClientsPartnersSection /> */}
+
         {/* Broadcast Section */}
         <BroadcastSection />
-        
+
         {/* Guest Section */}
         <GuestSection />
-        
+
         {/* Requirements Section */}
         <RequirementsSection />
-        
+
         {/* Contact Us Section */}
         <ContactSection />
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }
-

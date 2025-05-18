@@ -1,120 +1,130 @@
-# 🏏 Cricket Predicta
+# Cricket Predicta 🏏
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-cricket--predicta.vercel.app-orange?style=for-the-badge)](https://cricket-predicta.vercel.app/)
+![Cricket Predicta Logo](/public/images/logo.png)
 
-Welcome to **Cricket Predicta** — Asia's #1 Cricket Analytics Platform, broadcasting across 10 states in 7 languages! This project powers a modern, mobile-first, and visually stunning cricket analytics and broadcast platform.
+## Overview
 
----
+Cricket Predicta is Asia's most widely distributed TV show on Satellite Channels redefining sports analytics on television. Broadcasting across ten states of India in seven different languages, it delivers data-driven cricket insights to viewers nationwide.
 
 ## 🚀 Features
 
-- **Promo Load Optimization**: Fast, smooth hero video with mobile fallback and poster image.
-- **Legendary Cricketers Section**: Beautiful cards with images and bios of cricket legends.
-- **Clients & Partners**: Visually rich, responsive grid of major partners and broadcasters.
-- **Outcome Delivered**: Key metrics, testimonials, and case highlights.
-- **Full Mobile Responsiveness**: Every section is touch-friendly, readable, and adapts to all devices.
-- **Modern UI/UX**: Roboto font, dark/light theme toggle, and interactive cards.
-- **Contact & Requirements**: Easy-to-use contact form, social links, and broadcaster requirements.
-- **Broadcast Channels**: Grid of TV partners with standardized logos.
-- **Team Section**: Highlighting the visionary behind Cricket Predicta.
+- **Advanced Cricket Analytics**: Powered by sophisticated algorithms and deep cricket expertise
+- **Real-time Analytics**: Get advanced match predictions and insights as events unfold
+- **Expert Analysis**: Professional insights from cricket veterans and analysts
+- **Live Updates**: Real-time scores and match developments from cricket matches worldwide
+- **Multi-language Support**: Available in 7 regional languages including Punjabi, Gujarati, Rajasthani, Marathi, and Haryanvi
+- **Wide Reach**: Broadcasting across 10 states in India, reaching 250M+ viewers monthly
+- **High Accuracy**: 98% prediction accuracy for match outcomes
 
----
+## 💻 Tech Stack
 
-## 🛠️ Tech Stack
+- **Frontend**: Next.js 14 with React
+- **Styling**: Tailwind CSS with custom components
+- **UI Components**: Shadcn UI
+- **Animations**: CSS transitions and React hooks
+- **Responsive Design**: Mobile-first approach with responsive breakpoints
+- **Theme Support**: Light/dark mode toggle
 
-- **Next.js 13+** (App Router)
-- **React 18**
-- **Tailwind CSS** (with custom theme)
-- **TypeScript**
-- **Lucide Icons**
-- **Vercel** (deployment)
+## 📊 Key Metrics
 
----
+- **250M+** Monthly Audience Reach
+- **98%** Prediction Accuracy
+- **1.2M+** Monthly Engagements
+- **4.8/5** User Rating
 
-## 📦 Folder Structure
+## 🏆 Case Highlights
+
+- **Record-Breaking Viewership**: Special World Cup episode reached over 50 million viewers in a single week
+- **Partner Success**: Leading broadcasters saw 3x increase in audience engagement after integrating Cricket Predicta's analytics
+
+## 🏗️ Project Structure
 
 ```
 Cricket-Predicta/
-├── app/
-│   ├── components/
-│   │   └── sections/
-│   ├── hooks/
-│   ├── page.tsx
-│   └── ...
-├── public/
+├── app/               # Next.js app directory
+│   ├── components/    # App-specific components
+│   └── hooks/         # Custom React hooks
+├── components/        # Shared UI components
+│   └── ui/            # Base UI components
+├── hooks/             # Global hooks
+├── lib/               # Utility functions
+├── public/            # Static assets
+│   ├── assets/
 │   ├── Brands/
-│   ├── Lengadary Crickters/
-│   └── ...
-├── styles/
-│   └── globals.css
-├── tailwind.config.ts
-├── README.md
-└── ...
+│   ├── Guest/
+│   ├── images/
+│   └── Lengadary-Crickters/
+└── styles/            # Global styles
 ```
 
----
+## 🚀 Getting Started
 
-## ⚡ Quick Start
+### Prerequisites
 
-1. **Clone the repo:**
+- Node.js 18+ 
+- npm or pnpm
+
+### Installation
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/Cricket-Predicta.git
    cd Cricket-Predicta
    ```
-2. **Install dependencies:**
+
+2. Install dependencies:
    ```bash
    npm install
    # or
-   yarn install
-   # or
    pnpm install
    ```
-3. **Run locally:**
+
+3. Run the development server:
    ```bash
    npm run dev
+   # or
+   pnpm dev
    ```
-4. **Visit:** [http://localhost:3000](http://localhost:3000)
 
----
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## 🌐 Live Demo
+## 🧩 Key Components
 
-Check out the live site: [https://cricket-predicta.vercel.app/](https://cricket-predicta.vercel.app/)
+- **Hero Section**: Showcase video content with key features
+- **About Section**: Information about Cricket Predicta's coverage and reach
+- **Legendary Cricketers**: Profiles of cricket icons
+- **Outcome Delivered**: Results and impact metrics
+- **Interactive header**: Esports and crypto-inspired styling
 
----
+## 🎨 Customization
 
-## 🖼️ Screenshots
+The application uses Tailwind CSS for styling. You can customize the theme by modifying:
 
-> _Add screenshots of the Hero, Legendary Cricketers, Clients & Partners, and Mobile views here!_
+- `tailwind.config.ts`: Configure colors, fonts, and other theme settings
+- `components.json`: Configure component presets
 
----
+## 📱 Responsive Design
 
-## 📝 Contribution
+The application is fully responsive with optimizations for:
+- Mobile devices
+- Tablets
+- Desktop screens
 
-1. Fork the repo
-2. Create your feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
+## 🔄 Deployment
 
----
+The project is set up to be deployed on any platform that supports Next.js applications, such as:
+- Vercel
+- Netlify
+- AWS Amplify
 
-## 🙏 Credits
+## 📄 License
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Lucide Icons](https://lucide.dev/)
-- Cricket data, images, and assets © respective owners
-
----
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
-- **Email:** info@cricketpredicta.com
-- **Website:** [https://cricket-predicta.vercel.app/](https://cricket-predicta.vercel.app/)
-- **Instagram:** [@cricketpredicta](https://www.instagram.com/cricketpredicta)
-- **Twitter/X:** [@cricpredicta](https://x.com/cricpredicta)
+For inquiries about Cricket Predicta, please visit our website or contact us through the contact form.
 
 ---
 
-> _Cricket Predicta — Revolutionizing cricket analytics and broadcasting across India and beyond!_ 
+© 2023 Cricket Predicta. All Rights Reserved. 

@@ -17,7 +17,7 @@ export function RequirementsSection() {
 
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <div className="inline-block px-3 py-1 bg-primary/10 rounded-full backdrop-blur-sm mb-4">
               <span className="text-primary text-sm font-medium uppercase tracking-wider">
                 FOR BROADCASTERS
@@ -31,9 +31,9 @@ export function RequirementsSection() {
               Requirements for Cricket Predicta's broadcast team at Abu Dhabi
               T10
             </p>
-          </div>
+          </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30">
               <div className="space-y-5">
                 <div className="flex items-start gap-3">
@@ -88,9 +88,9 @@ export function RequirementsSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="mt-12 text-center">
+          <div className="text-center">
             <div className="inline-block p-6 bg-primary/5 rounded-xl border border-primary/20">
               <p className="text-lg font-medium text-slate-800 dark:text-white">
                 Interested in collaborating with Cricket Predicta for your
@@ -100,7 +100,7 @@ export function RequirementsSection() {
                 Contact us for broadcasting requirements and media partnerships
               </p>
               <a
-                href="mailto:info@cricketpredicta.com"
+                href="#contact"
                 className="mt-4 inline-block px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
               >
                 Get in Touch

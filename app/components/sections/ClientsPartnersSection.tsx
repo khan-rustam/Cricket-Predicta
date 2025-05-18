@@ -37,7 +37,7 @@ export function ClientsPartnersSection() {
             <div
               key={idx}
               className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-100 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700 h-48 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-primary/60 group relative overflow-hidden"
-              style={{ minHeight: '12rem' }}
+              style={{ minHeight: "12rem" }}
             >
               <div className="relative w-44 h-24 flex items-center justify-center mb-3">
                 <Image

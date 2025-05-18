@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Globe, Tv, BarChart3 } from "lucide-react";
@@ -11,17 +11,17 @@ import { useState, useEffect, useRef } from "react";
  */
 export function AboutSection() {
   // Count up hooks for statistics
-  const viewersCount = useCountUp({ 
-    end: 250, 
-    duration: 2500, 
-    suffix: "M+" 
+  const viewersCount = useCountUp({
+    end: 250,
+    duration: 2500,
+    suffix: "M+",
   });
-  
-  const accuracyCount = useCountUp({ 
-    end: 98, 
-    duration: 2000, 
+
+  const accuracyCount = useCountUp({
+    end: 98,
+    duration: 2000,
     suffix: "%",
-    delay: 300
+    delay: 300,
   });
 
   // Animation for stats container
@@ -65,7 +65,7 @@ export function AboutSection() {
       </div>
 
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
-        <div className="max-w-3xl mx-auto text-center mb-16 relative">
+        <div className="max-w-3xl mx-auto text-center mb-8 relative">
           <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 text-6xl opacity-5 font-bold">
             CRICKET PREDICTA
           </span>
@@ -74,10 +74,10 @@ export function AboutSection() {
               ABOUT US
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
             What is Cricket <span className="text-primary">Predicta</span>?
           </h2>
-          <div className="h-1 w-20 bg-primary mx-auto mb-8"></div>
+          <div className="h-1 w-20 bg-primary mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Discover how we're revolutionizing cricket analytics across India
           </p>
@@ -105,7 +105,7 @@ export function AboutSection() {
               </p>
             </div>
 
-            <div className="transition-all duration-500 hover:translate-y-[-4px] bg-background/30 p-6 rounded-xl border-l-4 border-primary">
+            <div className="transition-all duration-500 hover:translate-y-[-4px] bg-background/30 px-6 py-3 rounded-xl border-l-4 border-primary">
               <p className="text-lg leading-relaxed">
                 The show offers real-time statistics, predictive modeling, and
                 player performance analytics, all powered by advanced data
@@ -124,82 +124,102 @@ export function AboutSection() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-primary/10 to-transparent p-6 rounded-xl transition-all duration-500 hover:shadow-lg">
+            <div className="bg-gradient-to-r from-primary/10 to-transparent px-6 py-2 rounded-xl transition-all duration-500 hover:shadow-lg">
               <p className="text-lg leading-relaxed font-medium text-foreground">
                 Cricket Predicta stands as an unmatched analytics-driven
                 platform, revolutionizing cricket viewing with insights for
                 every fan across India.
               </p>
             </div>
-
-            <div className="pt-8 flex flex-wrap gap-4">
-              <Button className="px-8 rounded-full group relative overflow-hidden">
-                <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-full bg-white/10 group-hover:translate-x-0"></span>
-                <span className="relative">Learn More About Us</span>
-              </Button>
-              <Button variant="outline" className="px-8 rounded-full">
-                Contact Us
-              </Button>
-            </div>
           </div>
 
           <div className="lg:col-span-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-background/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/30 hover:-translate-y-1">
-                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4 transition-all duration-300 hover:bg-primary/20">
-                  <Globe className="h-6 w-6 text-primary" />
+              <div className="bg-background/50 backdrop-blur-sm p-5 rounded-xl border border-border/50 shadow-md transition-all duration-300 hover:shadow-xl hover:border-primary hover:-translate-y-2 group">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-primary/10 p-2.5 rounded-full transition-all duration-300 group-hover:bg-primary group-hover:rotate-12">
+                    <Globe className="h-5 w-5 text-primary transition-all duration-300 group-hover:text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold transition-all duration-300 group-hover:text-primary">10 States</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-2">10 States</h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Broadcast across India, reaching millions of viewers daily
                 </p>
-                <div className="w-full h-1 bg-gradient-to-r from-primary/50 to-transparent rounded-full mt-4"></div>
+                <div className="w-full h-1 bg-gradient-to-r from-primary/50 to-transparent rounded-full mt-3 transform origin-left transition-all duration-500 scale-x-75 group-hover:scale-x-100"></div>
               </div>
 
-              <div className="bg-background/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/30 hover:-translate-y-1">
-                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4 transition-all duration-300 hover:bg-primary/20">
-                  <Tv className="h-6 w-6 text-primary" />
+              <div className="bg-background/50 backdrop-blur-sm p-5 rounded-xl border border-border/50 shadow-md transition-all duration-300 hover:shadow-xl hover:border-primary hover:-translate-y-2 group">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-primary/10 p-2.5 rounded-full transition-all duration-300 group-hover:bg-primary group-hover:rotate-12">
+                    <Tv className="h-5 w-5 text-primary transition-all duration-300 group-hover:text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold transition-all duration-300 group-hover:text-primary">7 Languages</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-2">7 Languages</h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Content available in multiple regional languages
                 </p>
-                <div className="w-full h-1 bg-gradient-to-r from-primary/50 to-transparent rounded-full mt-4"></div>
+                <div className="w-full h-1 bg-gradient-to-r from-primary/50 to-transparent rounded-full mt-3 transform origin-left transition-all duration-500 scale-x-75 group-hover:scale-x-100"></div>
               </div>
 
-              <div className="bg-background/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/30 hover:-translate-y-1 md:col-span-2">
-                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4 transition-all duration-300 hover:bg-primary/20">
-                  <BarChart3 className="h-6 w-6 text-primary" />
+              <div className="bg-background/50 backdrop-blur-sm p-5 rounded-xl border border-border/50 shadow-md transition-all duration-300 hover:shadow-xl hover:border-primary hover:-translate-y-2 md:col-span-2 group">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-primary/10 p-2.5 rounded-full transition-all duration-300 group-hover:bg-primary group-hover:rotate-12">
+                    <BarChart3 className="h-5 w-5 text-primary transition-all duration-300 group-hover:text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold transition-all duration-300 group-hover:text-primary">Advanced Analytics</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Advanced Analytics</h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Powered by data science and machine learning to provide
                   unmatched cricket insights
                 </p>
-                <div className="w-full h-1 bg-gradient-to-r from-primary/50 to-transparent rounded-full mt-4"></div>
+                <div className="w-full h-1 bg-gradient-to-r from-primary/50 to-transparent rounded-full mt-3 transform origin-left transition-all duration-500 scale-x-75 group-hover:scale-x-100"></div>
               </div>
             </div>
 
             {/* Stats counter */}
-            <div 
-              ref={statsContainerRef} 
+            <div
+              ref={statsContainerRef}
               className={`bg-background/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 shadow-lg mt-6 relative overflow-hidden transition-all duration-700 ${
-                isStatsVisible ? "transform-none opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                isStatsVisible
+                  ? "transform-none opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
             >
               <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/10 rounded-full filter blur-xl"></div>
               <h3 className="text-xl font-semibold mb-4">Our Impact</h3>
               <div className="grid grid-cols-2 gap-6">
-                <div className={`transition-all duration-500 delay-100 ${isStatsVisible ? "transform-none opacity-100" : "opacity-0 -translate-y-4"}`}>
-                  <p ref={viewersCount.ref as React.RefObject<HTMLParagraphElement>} className="text-3xl font-bold text-primary">
+                <div
+                  className={`transition-all duration-500 delay-100 ${
+                    isStatsVisible
+                      ? "transform-none opacity-100"
+                      : "opacity-0 -translate-y-4"
+                  }`}
+                >
+                  <p
+                    ref={
+                      viewersCount.ref as React.RefObject<HTMLParagraphElement>
+                    }
+                    className="text-3xl font-bold text-primary"
+                  >
                     {viewersCount.displayValue}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Monthly Viewers
                   </p>
                 </div>
-                <div className={`transition-all duration-500 delay-300 ${isStatsVisible ? "transform-none opacity-100" : "opacity-0 -translate-y-4"}`}>
-                  <p ref={accuracyCount.ref as React.RefObject<HTMLParagraphElement>} className="text-3xl font-bold text-primary">
+                <div
+                  className={`transition-all duration-500 delay-300 ${
+                    isStatsVisible
+                      ? "transform-none opacity-100"
+                      : "opacity-0 -translate-y-4"
+                  }`}
+                >
+                  <p
+                    ref={
+                      accuracyCount.ref as React.RefObject<HTMLParagraphElement>
+                    }
+                    className="text-3xl font-bold text-primary"
+                  >
                     {accuracyCount.displayValue}
                   </p>
                   <p className="text-sm text-muted-foreground">
@@ -207,43 +227,6 @@ export function AboutSection() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonial */}
-        <div className="max-w-3xl mx-auto mt-20 bg-background/60 backdrop-blur-md p-8 rounded-2xl border border-border/50 shadow-lg relative">
-          <div className="absolute -top-5 left-10 bg-primary text-white p-2 rounded-xl shadow-lg">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
-            >
-              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
-              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
-            </svg>
-          </div>
-          <p className="text-lg italic mb-4">
-            Cricket Predicta has transformed how we understand cricket
-            analytics. Their predictions and insights have been consistently
-            accurate and valuable for our team's strategy.
-          </p>
-          <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-3">
-              <span className="font-bold text-primary">RC</span>
-            </div>
-            <div>
-              <p className="font-medium">Rahul Chaudhary</p>
-              <p className="text-sm text-muted-foreground">
-                Cricket Team Analyst
-              </p>
             </div>
           </div>
         </div>
