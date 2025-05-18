@@ -3,12 +3,9 @@ import { Footer } from "@/components/footer";
 import {
   HeroSection,
   AboutSection,
-  TeamSection,
   BroadcastSection,
-  RequirementsSection,
   ContactSection,
   OutcomeDeliveredSection,
-  ClientsPartnersSection,
   LegendaryCricketersSection,
 } from "./components/sections";
 import { AnimatedBackground } from "./components/AnimatedBackground";
@@ -61,8 +58,6 @@ export default function Home() {
         {/* Guest Section */}
         <GuestSection />
 
-        {/* Requirements Section */}
-        <RequirementsSection />
 
         {/* Contact Us Section */}
         <ContactSection />

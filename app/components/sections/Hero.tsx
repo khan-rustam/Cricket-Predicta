@@ -11,6 +11,8 @@ import {
   Play,
   Volume2,
   VolumeX,
+  Users,
+  Star,
 } from "lucide-react";
 import logo from "@/public/images/logo.png";
 import { useState, useRef, useEffect } from "react";
@@ -22,6 +24,17 @@ import { useState, useRef, useEffect } from "react";
 export function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [activeTab, setActiveTab] = useState<number>(0);
+
+  // Cricket experts/analysts
+  const analysts = [
+    { id: 1, image: "/Guest/Guest-1.png" },
+    { id: 2, image: "/Guest/Guest-2.png" },
+    { id: 3, image: "/Guest/Guest-3.png" },
+    { id: 4, image: "/Guest/Guest-4.png" },
+    { id: 5, image: "/Guest/Guest-5.png" },
+    { id: 6, image: "/Guest/Guest-6.png" },
+  ];
 
   // Set video playback speed when the component mounts
   useEffect(() => {
@@ -29,6 +42,15 @@ export function HeroSection() {
       videoRef.current.playbackRate = 0.75; // Set speed to 0.75x (75% of normal speed)
     }
   }, []);
+
+  // Auto-rotate through analysts
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % analysts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [analysts.length]);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -92,7 +114,7 @@ export function HeroSection() {
         </div>
       </section>
 
-      {/* Features section - now a separate section for better content separation */}
+      {/* Advanced Cricket Analytics section */}
       <section className="container mx-auto py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16">
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
@@ -125,7 +147,9 @@ export function HeroSection() {
               <div className="bg-primary/10 p-3 md:p-4 rounded-full transition-all duration-300 group-hover:bg-primary">
                 <Shield className="h-5 w-5 md:h-6 md:w-6 text-primary transition-all duration-300 group-hover:text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-all duration-300">Expert Analysis</h3>
+              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-all duration-300">
+                Expert Analysis
+              </h3>
             </div>
             <p className="text-base md:text-lg text-muted-foreground">
               Professional insights from cricket veterans and analysts, helping
@@ -138,7 +162,9 @@ export function HeroSection() {
               <div className="bg-primary/10 p-3 md:p-4 rounded-full transition-all duration-300 group-hover:bg-primary">
                 <Zap className="h-5 w-5 md:h-6 md:w-6 text-primary transition-all duration-300 group-hover:text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-all duration-300">Live Updates</h3>
+              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-all duration-300">
+                Live Updates
+              </h3>
             </div>
             <p className="text-base md:text-lg text-muted-foreground">
               Stay updated with real-time scores and match developments from

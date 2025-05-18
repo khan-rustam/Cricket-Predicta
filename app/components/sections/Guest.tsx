@@ -12,22 +12,10 @@ interface GuestData {
 // Define guest data array
 const legendaryGuests: GuestData[] = [
   {
-    name: "Zaheer Abbas",
-    title: "Former Pakistan Captain",
-    description:
-      'Renowned as the "Asian Bradman"; scored 5,062 Test runs with 12 centuries.',
-  },
-  {
     name: "Andy Roberts",
     title: "Former West Indies Cricketer",
     description:
       "Pioneering fast bowler; spearheaded the fearsome 1970s Windies pace attack.",
-  },
-  {
-    name: "Makhaya Ntini",
-    title: "Former South African Cricketer",
-    description:
-      "First black African Proteas star; took 390 wickets in 101 Tests.",
   },
   {
     name: "David Gower",
@@ -42,10 +30,10 @@ const legendaryGuests: GuestData[] = [
       "First black Zimbabwean Test player; famed for 2003 World Cup black-armband protest.",
   },
   {
-    name: "Sarfaraz Nawaz",
-    title: "Former Pakistan Cricketer",
+    name: "Makhaya Ntini",
+    title: "Former South African Cricketer",
     description:
-      "Inventor of reverse swing; claimed 177 Test wickets for Pakistan.",
+      "First black African Proteas star; took 390 wickets in 101 Tests.",
   },
   {
     name: "Saeed Ajmal",
@@ -53,139 +41,88 @@ const legendaryGuests: GuestData[] = [
     description:
       'Master of the "doosra"; took 447 international wickets across formats.',
   },
+  {
+    name: "Sarfaraz Nawaz",
+    title: "Former Pakistan Cricketer",
+    description:
+      "Inventor of reverse swing; claimed 177 Test wickets for Pakistan.",
+  },
+  {
+    name: "Zaheer Abbas",
+    title: "Former Pakistan Captain",
+    description:
+      'Renowned as the "Asian Bradman"; scored 5,062 Test runs with 12 centuries.',
+  },
 ];
 
 // Define former cricketers & skippers data
 const formerCricketers: GuestData[] = [
-  {
-    name: "Atul Wassan",
-    title: "Former Indian Cricketer",
-    description:
-      "Played 4 Tests in the 1990s; now a prominent cricket analyst and commentator.",
-  },
+  // {
+  //   name: "Aryan Chaudhary",
+  //   title: "U-23 Delhi State Player",
+  //   description:
+  //     "Promising leg-spinner; named in India's U-19 probables for 2024.",
+  // },
+  // {
+  //   name: "Atul Wassan",
+  //   title: "Former Indian Cricketer",
+  //   description:
+  //     "Played 4 Tests in the 1990s; now a prominent cricket analyst and commentator.",
+  // },
+  // {
+  //   name: "Baltej Singh",
+  //   title: "Ranji Bowler, Punjab; Punjab Kings, IPL 2023",
+  //   description: "Sikh trailblazer; first turbaned player in IPL history.",
+  // },
+  // {
+  //   name: "Bhargav Merai",
+  //   title: "First-Class Cricketer, Indian Railways",
+  //   description:
+  //     "Consistent run-scorer; 3,000+ Ranji Trophy runs at 45+ average.",
+  // },
+  // {
+  //   name: "CM Gautam",
+  //   title: "Former IPL Player",
+  //   description:
+  //     "Karnataka wicketkeeper; played for RCB and Mumbai Indians in IPL.",
+  // },
+  // {
+  //   name: "Charvi Bhatt",
+  //   title: "Former UAE Skipper",
+  //   description: "Captain during UAE's 2018 T20 World Cup Qualifier campaign.",
+  // },
+  // {
+  //   name: "Chaya Mughal",
+  //   title: "Former UAE Skipper",
+  //   description:
+  //     "All-rounder; UAE's leading wicket-taker in WT20Is until 2021.",
+  // },
+  // {
+  //   name: "Chioza",
+  //   title: "Former Zimbabwean Cricketer",
+  //   description:
+  //     "All-rounder who represented Zimbabwe in 23 ODIs during the 1990s.",
+  // },
+  // {
+  //   name: "Christopher Mfopo",
+  //   title: "Former Zimbabwean Cricketer",
+  //   description: "Bowler who featured in Zimbabwe's 1999 World Cup squad.",
+  // },
+  // {
+  //   name: "David",
+  //   title: "Former International Cricketer, India",
+  //   description:
+  //     "Off-spinner who played 4 ODIs in 1997; father of current star Washington Sundar.",
+  // },
   {
     name: "Dean Elgar",
     title: "Former South African Skipper",
     description: "Gritty opener; led SA in 17 Tests before retiring in 2023.",
   },
   {
-    name: "Chioza",
-    title: "Former Zimbabwean Cricketer",
-    description:
-      "All-rounder who represented Zimbabwe in 23 ODIs during the 1990s.",
-  },
-  {
-    name: "Tatenda Taibu",
-    title: "Former Zimbabwean Skipper",
-    description:
-      "Youngest Test captain at 21; retired in 2012 to pursue ministry work.",
-  },
-  {
-    name: "David",
-    title: "Former International Cricketer, India",
-    description:
-      "Off-spinner who played 4 ODIs in 1997; father of current star Washington Sundar.",
-  },
-  {
-    name: "Gursharan Singh",
-    title: "Former Test Cricketer",
-    description:
-      "Scored 298 in Ranji Trophy; played 1 Test against South Africa in 1990.",
-  },
-  {
-    name: "Tanmay Mishra",
-    title: "Former Kenya Cricketer",
-    description:
-      "Middle-order stalwart; featured in 2007 and 2011 World Cups for Kenya.",
-  },
-  {
-    name: "Vineet Jain",
-    title: "Former A-Class Cricketer",
-    description:
-      "Delhi batsman; played 43 first-class matches between 1988-1996.",
-  },
-  {
-    name: "Raju Pathak",
-    title: "Cricket Coach",
-    description:
-      "Specializes in biomechanics; mentored IPL talents like Shivam Mavi.",
-  },
-  {
-    name: "Sadanand Viswanath",
-    title: "Former Indian Cricketer",
-    description:
-      "Wicketkeeper-batsman; part of India's 1985 World Championship-winning squad.",
-  },
-  {
-    name: "Shahzad Altaf",
-    title: "Former UAE Cricketer",
-    description: "Pace bowler; represented UAE in 1996 World Cup qualifiers.",
-  },
-  {
-    name: "TP Singh",
-    title: "Club Cricketer, UK",
-    description:
-      "All-rounder for Surrey clubs; runs cricket academies in London.",
-  },
-  {
-    name: "CM Gautam",
-    title: "Former IPL Player",
-    description:
-      "Karnataka wicketkeeper; played for RCB and Mumbai Indians in IPL.",
-  },
-  {
-    name: "Bhargav Merai",
-    title: "First-Class Cricketer, Indian Railways",
-    description:
-      "Consistent run-scorer; 3,000+ Ranji Trophy runs at 45+ average.",
-  },
-  {
-    name: "V Cheluvaraj",
-    title: "Former Indian Railways Ranji Cricketer",
-    description: "Opening batsman; scored 10 centuries in domestic cricket.",
-  },
-  {
-    name: "Baltej Singh",
-    title: "Ranji Bowler, Punjab; Punjab Kings, IPL 2023",
-    description: "Sikh trailblazer; first turbaned player in IPL history.",
-  },
-  {
-    name: "Sidra Nawaz Bhatti",
-    title: "Former Pakistan Skipper",
-    description: "Wicketkeeper-batter; led Pakistan in 15 ODIs and 23 T20Is.",
-  },
-  {
-    name: "Charvi Bhatt",
-    title: "Former UAE Skipper",
-    description: "Captain during UAE's 2018 T20 World Cup Qualifier campaign.",
-  },
-  {
-    name: "Chaya Mughal",
-    title: "Former UAE Skipper",
-    description:
-      "All-rounder; UAE's leading wicket-taker in WT20Is until 2021.",
-  },
-  {
     name: "Dirk Viljoen",
     title: "Former Zimbabwean Cricketer",
     description: "Left-arm spinner; played 80 ODIs between 1996-2004.",
-  },
-  {
-    name: "Christopher Mfopo",
-    title: "Former Zimbabwean Cricketer",
-    description: "Bowler who featured in Zimbabwe's 1999 World Cup squad.",
-  },
-  {
-    name: "John Nyumbu",
-    title: "Former Zimbabwean Cricketer",
-    description:
-      "Off-spinner; took a five-wicket haul on Test debut vs South Africa (2014).",
-  },
-  {
-    name: "Regis Chakabva",
-    title: "Former Zimbabwean Cricketer",
-    description:
-      "Wicketkeeper-batter; scored 1,800+ ODI runs before retiring in 2023.",
   },
   {
     name: "Fahad Nawaz",
@@ -194,32 +131,95 @@ const formerCricketers: GuestData[] = [
       "Aggressive top-order batsman; UAE's T20I vice-captain since 2022.",
   },
   {
+    name: "Gursharan Singh",
+    title: "Former Test Cricketer",
+    description:
+      "Scored 298 in Ranji Trophy; played 1 Test against South Africa in 1990.",
+  },
+  {
+    name: "John Nyumbu",
+    title: "Former Zimbabwean Cricketer",
+    description:
+      "Off-spinner; took a five-wicket haul on Test debut vs South Africa (2014).",
+  },
+  // {
+  //   name: "Morten Kriek",
+  //   title: "Former Dutch Cricketer & Founder Wisselbanck",
+  //   description:
+  //     "Played 40 T20Is for Netherlands; runs a cricket talent agency.",
+  // },
+  {
+    name: "Raju Pathak",
+    title: "Cricket Coach",
+    description:
+      "Specializes in biomechanics; mentored IPL talents like Shivam Mavi.",
+  },
+  {
+    name: "Regis Chakabva",
+    title: "Former Zimbabwean Cricketer",
+    description:
+      "Wicketkeeper-batter; scored 1,800+ ODI runs before retiring in 2023.",
+  },
+  {
+    name: "Sadanand Viswanath",
+    title: "Former Indian Cricketer",
+    description:
+      "Wicketkeeper-batsman; part of India's 1985 World Championship-winning squad.",
+  },
+  // {
+  //   name: "Shahzad Altaf",
+  //   title: "Former UAE Cricketer",
+  //   description: "Pace bowler; represented UAE in 1996 World Cup qualifiers.",
+  // },
+  {
+    name: "Sidra Nawaz Bhatti",
+    title: "Former Pakistan Skipper",
+    description: "Wicketkeeper-batter; led Pakistan in 15 ODIs and 23 T20Is.",
+  },
+  // {
+  //   name: "TP Singh",
+  //   title: "Club Cricketer, UK",
+  //   description:
+  //     "All-rounder for Surrey clubs; runs cricket academies in London.",
+  // },
+  {
+    name: "Tanmay Mishra",
+    title: "Former Kenya Cricketer",
+    description:
+      "Middle-order stalwart; featured in 2007 and 2011 World Cups for Kenya.",
+  },
+  {
     name: "Tasmeen Granger",
     title: "Zimbabwean Cricketer",
     description:
       "Emerging pace bowler; part of Zimbabwe's U-19 World Cup 2024 squad.",
   },
   {
-    name: "Aryan Chaudhary",
-    title: "U-23 Delhi State Player",
+    name: "Tatenda Taibu",
+    title: "Former Zimbabwean Skipper",
     description:
-      "Promising leg-spinner; named in India's U-19 probables for 2024.",
+      "Youngest Test captain at 21; retired in 2012 to pursue ministry work.",
   },
-  {
-    name: "Morten Kriek",
-    title: "Former Dutch Cricketer & Founder Wisselbanck",
-    description:
-      "Played 40 T20Is for Netherlands; runs a cricket talent agency.",
-  },
+  // {
+  //   name: "V Cheluvaraj",
+  //   title: "Former Indian Railways Ranji Cricketer",
+  //   description: "Opening batsman; scored 10 centuries in domestic cricket.",
+  // },
+  // {
+  //   name: "Vineet Jain",
+  //   title: "Former A-Class Cricketer",
+  //   description:
+  //     "Delhi batsman; played 43 first-class matches between 1988-1996.",
+  // },
 ];
 
 // Define coaches data
 const coaches: GuestData[] = [
   {
-    name: "Rajkumar Sharma",
-    title: "Coach of Virat Kohli",
+    name: "Dav Whatmore",
+    title: "World Cup-Winning Coach",
     description:
-      "Mentored Kohli from childhood; founded West End Cricket Academy in Delhi.",
+      "Masterminded Sri Lanka's 1996 WC win; coached Bangladesh and Zimbabwe.",
   },
   {
     name: "Mudassar Nazar",
@@ -228,44 +228,20 @@ const coaches: GuestData[] = [
       "Opened with Javed Miandad in 1980s; later coached UAE and Kenya.",
   },
   {
-    name: "Dav Whatmore",
-    title: "World Cup-Winning Coach",
+    name: "Rajkumar Sharma",
+    title: "Coach of Virat Kohli",
     description:
-      "Masterminded Sri Lanka's 1996 WC win; coached Bangladesh and Zimbabwe.",
+      "Mentored Kohli from childhood; founded West End Cricket Academy in Delhi.",
   },
 ];
 
 // Define cricket experts, analysts & umpires data
 const cricketExperts: GuestData[] = [
   {
-    name: "Sanjay Rawal",
-    title: "ECB Development Manager",
-    description:
-      "Drives grassroots programs; key figure in ECB's South Asian Action Plan.",
-  },
-  {
-    name: "Terry Blake",
-    title: "Ex-ECB Director",
-    description:
-      "Oversaw England's 2019 WC logistics; former CEO of Kent County Cricket Club.",
-  },
-  {
     name: "Anil Chaudhary",
     title: "Indian Cricket Umpire",
     description:
       "Officiated 60+ international matches; part of 2023 World Cup panel.",
-  },
-  {
-    name: "Snehal Phadke",
-    title: "International Women Umpire",
-    description:
-      "First Indian woman to officiate in a WT20I (2019); promotes gender equity.",
-  },
-  {
-    name: "Roland Butcher",
-    title: "West Indies Selector",
-    description:
-      "First black England Test cricketer (1980); current Windies selector since 2019.",
   },
   {
     name: "Georgina Hault",
@@ -279,16 +255,34 @@ const cricketExperts: GuestData[] = [
     description:
       "Head analyst for PSL franchises; created real-time bowling heatmaps.",
   },
+  {
+    name: "Roland Butcher",
+    title: "West Indies Selector",
+    description:
+      "First black England Test cricketer (1980); current Windies selector since 2019.",
+  },
+  {
+    name: "Sanjay Rawal",
+    title: "ECB Development Manager",
+    description:
+      "Drives grassroots programs; key figure in ECB's South Asian Action Plan.",
+  },
+  {
+    name: "Snehal Phadke",
+    title: "International Women Umpire",
+    description:
+      "First Indian woman to officiate in a WT20I (2019); promotes gender equity.",
+  },
+  {
+    name: "Terry Blake",
+    title: "Ex-ECB Director",
+    description:
+      "Oversaw England's 2019 WC logistics; former CEO of Kent County Cricket Club.",
+  },
 ];
 
 // Define commentators and broadcasters data
 const commentators: GuestData[] = [
-  {
-    name: "Philasande Sixaba",
-    title: "Cricket Commentator, South Africa",
-    description:
-      "Lead voice on SuperSport; former Western Province wicketkeeper.",
-  },
   {
     name: "Andrew Leonard",
     title: "International Cricket Commentator",
@@ -304,6 +298,12 @@ const commentators: GuestData[] = [
     name: "Nono Pongolo",
     title: "Former South African League Cricketer & Commentator",
     description: "Analyst for SABC Sport; played 98 first-class matches.",
+  },
+  {
+    name: "Philasande Sixaba",
+    title: "Cricket Commentator, South Africa",
+    description:
+      "Lead voice on SuperSport; former Western Province wicketkeeper.",
   },
 ];
 
@@ -402,8 +402,6 @@ export function GuestSection() {
       <div className="flex-1 overflow-auto py-8 sm:py-10">
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
           <div className="max-w-6xl mx-auto">
-           
-
             {/* Former Cricketers & Skippers section */}
             <div className="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-slate-200/50 dark:border-slate-700/30 mb-8 sm:mb-10">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-primary relative">
@@ -412,11 +410,31 @@ export function GuestSection() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                 {formerCricketers.map((guest, index) => (
-                  <FormerCricketerCard
-                    guest={guest}
-                    index={index}
+                  <div
                     key={index}
-                  />
+                    className="bg-slate-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]"
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={`/Former Cricketer/${guest.name}.png`}
+                        alt={guest.name}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                        onError={(e) => {
+                          // Fallback to placeholder if image fails to load
+                          (e.target as HTMLImageElement).src =
+                            "/assets/placeholder.png";
+                        }}
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h4 className="text-lg font-semibold text-white">
+                        {guest.name}
+                      </h4>
+                      <p className="text-sm text-primary font-medium">
+                        {guest.title}
+                      </p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -429,7 +447,26 @@ export function GuestSection() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {coaches.map((guest, index) => (
-                  <GuestCard guest={guest} index={index} key={index} />
+                  <div
+                    key={index}
+                    className="bg-slate-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]"
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={`/Coaches/${guest.name}.png`}
+                        alt={guest.name}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h4 className="text-lg font-semibold text-white">
+                        {guest.name}
+                      </h4>
+                      <p className="text-sm text-primary font-medium">
+                        {guest.title}
+                      </p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -455,7 +492,26 @@ export function GuestSection() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {commentators.map((guest, index) => (
-                  <GuestCard guest={guest} index={index} key={index} />
+                  <div
+                    key={index}
+                    className="bg-slate-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]"
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={`/Commentator/${guest.name}.png`}
+                        alt={guest.name}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h4 className="text-lg font-semibold text-white">
+                        {guest.name}
+                      </h4>
+                      <p className="text-sm text-primary font-medium">
+                        {guest.title}
+                      </p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
