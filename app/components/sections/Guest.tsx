@@ -245,7 +245,7 @@ const cricketExperts: GuestData[] = [
   },
   {
     name: "C. M. Gautam",
-    title: "Former IPL Player",
+    title: "India domestic cricketer",
     description:
       "Karnataka wicketkeeper; played for RCB and Mumbai Indians in IPL.",
   },
