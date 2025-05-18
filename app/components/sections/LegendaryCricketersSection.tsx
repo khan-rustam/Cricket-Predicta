@@ -24,7 +24,7 @@ export function LegendaryCricketersSection() {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Legends of <span className="text-primary">Cricket</span>
+            Cricket Legends <span className="text-primary">Who Joined Us!</span>
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-8"></div>
           <p className="text-muted-foreground max-w-xl mx-auto">

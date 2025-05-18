@@ -11,6 +11,7 @@ import {
   MapPin,
   ArrowUpCircle,
   Linkedin,
+  Youtube,
 } from "lucide-react";
 
 /**
@@ -151,6 +152,12 @@ export function Footer() {
                 className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@cricketpredicta"
+                className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <Youtube className="h-5 w-5" />
               </a>
               <a
                 href="#"

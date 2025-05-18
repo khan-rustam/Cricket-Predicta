@@ -239,9 +239,20 @@ const coaches: GuestData[] = [
 const cricketExperts: GuestData[] = [
   {
     name: "Anil Chaudhary",
-    title: "Indian Cricket Umpire",
+    title: "Former International & IPL Umpire",
     description:
       "Officiated 60+ international matches; part of 2023 World Cup panel.",
+  },
+  {
+    name: "C. M. Gautam",
+    title: "Former IPL Player",
+    description:
+      "Karnataka wicketkeeper; played for RCB and Mumbai Indians in IPL.",
+  },
+  {
+    name: "Christopher Mpofu",
+    title: "Former Zimbabwean Cricketer",
+    description: "Bowler who featured in Zimbabwe's 1999 World Cup squad.",
   },
   {
     name: "Georgina Hault",
@@ -250,10 +261,16 @@ const cricketExperts: GuestData[] = [
       'Tactics specialist for Sky Sports; co-developed the "Powerplay Impact Index".',
   },
   {
-    name: "Kamran Muzaffar",
-    title: "International Data Analyst",
+    name: "Noel David",
+    title: "Former Indian Cricketer",
     description:
-      "Head analyst for PSL franchises; created real-time bowling heatmaps.",
+      "All-rounder who played ODIs for India in the late 1990s; known for his fielding abilities.",
+  },
+  {
+    name: "Paul Dennett",
+    title: "Cricket Journalist, Australia",
+    description:
+      "Veteran sports writer with 20+ years covering Australian cricket; ABC commentator.",
   },
   {
     name: "Roland Butcher",
@@ -262,16 +279,28 @@ const cricketExperts: GuestData[] = [
       "First black England Test cricketer (1980); current Windies selector since 2019.",
   },
   {
-    name: "Sanjay Rawal",
-    title: "ECB Development Manager",
+    name: "Sarandeep Singh",
+    title: "Former Indian Cricketer & Ex-National Selector",
     description:
-      "Drives grassroots programs; key figure in ECB's South Asian Action Plan.",
+      "Off-spinner who played 3 Tests and 5 ODIs; served on BCCI selection committee.",
   },
   {
-    name: "Snehal Phadke",
-    title: "International Women Umpire",
+    name: "Stanley Chioza",
+    title: "Former Zimbabwean Cricketer",
     description:
-      "First Indian woman to officiate in a WT20I (2019); promotes gender equity.",
+      "All-rounder who represented Zimbabwe in 23 ODIs during the 1990s.",
+  },
+  {
+    name: "Sunil Yash Kalra",
+    title: "Cricket Scholar",
+    description:
+      "Author and cricket historian; documented the evolution of T20 cricket in South Asia.",
+  },
+  {
+    name: "Taus Rizvi",
+    title: "Senior Sports Journalist",
+    description:
+      "Veteran cricket writer; covered 6 World Cups and interviewed cricket legends globally.",
   },
   {
     name: "Terry Blake",
@@ -479,7 +508,31 @@ export function GuestSection() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {cricketExperts.map((guest, index) => (
-                  <GuestCard guest={guest} index={index} key={index} />
+                  <div
+                    key={index}
+                    className="bg-slate-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]"
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={`/Guest/${guest.name}.png`}
+                        alt={guest.name}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                        onError={(e) => {
+                          // Fallback to placeholder if image fails to load
+                          (e.target as HTMLImageElement).src =
+                            "/assets/placeholder.png";
+                        }}
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h4 className="text-lg font-semibold text-white">
+                        {guest.name}
+                      </h4>
+                      <p className="text-sm text-primary font-medium">
+                        {guest.title}
+                      </p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
