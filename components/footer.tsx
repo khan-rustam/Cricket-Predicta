@@ -86,16 +86,54 @@ export function Footer() {
             <div className="space-y-3 text-slate-300">
               <p className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary/80 mt-0.5 shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>
+                  <a
+                    href="https://wa.me/971558689330"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
+                    +971 55 868 9330
+                  </a>
+                </span>
+              </p>
+              <p className="flex items-start gap-3">
+                <Phone className="h-5 w-5 text-primary/80 mt-0.5 shrink-0" />
+                <span>
+                  <a
+                    href="https://wa.me/919873932009"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
+                    098739 32009
+                  </a>
+                </span>
               </p>
               <p className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary/80 mt-0.5 shrink-0" />
-                <span>info@cricketpredicta.com</span>
+                <span>
+                  <a
+                    href="mailto:contact@cricketpredicta.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
+                    contact@cricketpredicta.com
+                  </a>
+                </span>
               </p>
               <p className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary/80 mt-0.5 shrink-0" />
+                <Mail className="h-5 w-5 text-primary/80 mt-0.5 shrink-0" />
                 <span>
-                  123 Cricket Stadium Road, Mumbai, Maharashtra, India - 400001
+                  <a
+                    href="mailto:info@cricketpredicta.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
+                    info@cricketpredicta.com
+                  </a>
                 </span>
               </p>
             </div>

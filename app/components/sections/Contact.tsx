@@ -126,10 +126,24 @@ export function ContactSection() {
                       Call Us
                     </h4>
                     <p className="text-slate-600 dark:text-slate-300">
-                      +91 98765 43210
+                      <a
+                        href="https://wa.me/971558689330"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary"
+                      >
+                        +971 55 868 9330
+                      </a>
                     </p>
                     <p className="text-slate-600 dark:text-slate-300">
-                      +91 87654 32109
+                      <a
+                        href="https://wa.me/919873932009"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary"
+                      >
+                        098739 32009
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -143,15 +157,25 @@ export function ContactSection() {
                       Email Us
                     </h4>
                     <p className="text-slate-600 dark:text-slate-300">
-                      info@cricketpredicta.com
+                      <a
+                        href="mailto:contact@cricketpredicta.com"
+                        className="hover:text-primary"
+                      >
+                        contact@cricketpredicta.com
+                      </a>
                     </p>
                     <p className="text-slate-600 dark:text-slate-300">
-                      support@cricketpredicta.com
+                      <a
+                        href="mailto:info@cricketpredicta.com"
+                        className="hover:text-primary"
+                      >
+                        info@cricketpredicta.com
+                      </a>
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <div className="bg-primary/10 p-3 rounded-lg shadow-sm">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
@@ -167,7 +191,7 @@ export function ContactSection() {
                       India - 400001
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -179,13 +203,13 @@ export function ContactSection() {
               </h3>
               <div className="flex gap-4">
                 <a
-                 href="https://www.facebook.com/share/18fPALuu7u/"
+                  href="https://www.facebook.com/share/18fPALuu7u/"
                   className="w-11 h-11 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors shadow-sm"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a
-                   href="https://x.com/cricpredicta"
+                  href="https://x.com/cricpredicta"
                   className="w-11 h-11 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors shadow-sm"
                 >
                   <Twitter className="h-5 w-5" />
