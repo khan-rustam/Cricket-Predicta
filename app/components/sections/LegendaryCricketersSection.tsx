@@ -44,6 +44,7 @@ export function LegendaryCricketersSection() {
                   alt={cricketer.name}
                   fill
                   className="object-cover group-hover:scale-110 transition-all duration-500"
+                  {...(idx === 0 ? { priority: true } : { loading: "lazy" })}
                 />
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/70 to-transparent z-10" />
               </div>

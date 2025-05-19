@@ -1,16 +1,18 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import {
-  HeroSection,
-  AboutSection,
-  BroadcastSection,
-  ContactSection,
-  OutcomeDeliveredSection,
-  LegendaryCricketersSection,
-} from "./components/sections";
+import dynamic from "next/dynamic";
 import { AnimatedBackground } from "./components/AnimatedBackground";
 import { GuestSection } from "./components/sections/Guest";
 import Head from "next/head";
+import {
+  AboutSection,
+  BroadcastSection,
+  ContactSection,
+  GallerySection,
+  HeroSection,
+  LegendaryCricketersSection,
+  OutcomeDeliveredSection,
+} from "./components/sections";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 /**
  * Main page component for Cricket Predicta
@@ -55,9 +57,11 @@ export default function Home() {
         {/* Broadcast Section */}
         <BroadcastSection />
 
+        {/* Gallery Section */}
+        <GallerySection />
+
         {/* Guest Section */}
         <GuestSection />
-
 
         {/* Contact Us Section */}
         <ContactSection />

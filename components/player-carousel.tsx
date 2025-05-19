@@ -89,7 +89,7 @@ export default function PlayerCarousel() {
                 alt={player.name} 
                 fill 
                 className="object-contain p-4" 
-                priority 
+                {...(index === currentPlayer ? { priority: true } : { loading: "lazy" })}
               />
             </div>
           </div>

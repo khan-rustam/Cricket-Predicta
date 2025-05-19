@@ -209,6 +209,7 @@ export function Footer() {
                 width={60}
                 height={60}
                 className="object-contain mb-2"
+                priority
               />
               <p className="text-primary font-bold">Cricket Predicta</p>
             </div>

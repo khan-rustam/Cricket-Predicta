@@ -6,3 +6,4 @@ export { ContactSection } from "./Contact";
 export { OutcomeDeliveredSection } from "./OutcomeDeliveredSection";
 export { ClientsPartnersSection } from "./ClientsPartnersSection";
 export { LegendaryCricketersSection } from "./LegendaryCricketersSection";
+export { default as GallerySection } from "./Gallery";

@@ -25,6 +25,8 @@ export function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activeTab, setActiveTab] = useState<number>(0);
+  const [loadVideo, setLoadVideo] = useState(false);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
 
   // Cricket experts/analysts
   const analysts = [
@@ -52,6 +54,22 @@ export function HeroSection() {
     return () => clearInterval(interval);
   }, [analysts.length]);
 
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (videoContainerRef.current) {
+      observer.observe(videoContainerRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
@@ -65,24 +83,35 @@ export function HeroSection() {
       <section
         id="home"
         className="relative w-full h-[50vh] sm:h-[91vh] overflow-hidden"
+        ref={videoContainerRef}
       >
         {/* Video container with fixed aspect ratio to ensure full visibility */}
         <div className="pt- absolute inset-0 w-full h-full flex items-center justify-center bg-black">
           <div className="relative w-full h-full">
             {/* Show video on md+ screens, image on mobile */}
-            <video
-              ref={videoRef}
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster={logo.src}
-              preload="metadata"
-              className="block absolute inset-0 w-full h-full object-cover max-h-[320px] md:max-h-full mx-auto my-auto"
-            >
-              <source src="/Home.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {loadVideo ? (
+              <video
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster={logo.src}
+                preload="none"
+                className="block absolute inset-0 w-full h-full object-cover max-h-[320px] md:max-h-full mx-auto my-auto"
+              >
+                <source src="/Home.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <Image
+                src={logo.src}
+                alt="Cricket Predicta Logo"
+                fill
+                className="object-cover"
+                loading="lazy"
+              />
+            )}
           </div>
 
           {/* Dark overlay for better text visibility */}

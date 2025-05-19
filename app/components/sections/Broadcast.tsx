@@ -155,6 +155,7 @@ export function BroadcastSection() {
                         width={180}
                         height={100}
                         className="object-contain max-h-[100px]"
+                        {...(index === 0 ? { priority: true } : { loading: "lazy" })}
                       />
                     </div>
                   ) : (

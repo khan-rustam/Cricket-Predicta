@@ -44,6 +44,7 @@ export function Header() {
               width={55}
               height={55}
               className="object-contain"
+              // loading="lazy"
               priority
             />
             <div className="absolute inset-0 bg-primary/10 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>

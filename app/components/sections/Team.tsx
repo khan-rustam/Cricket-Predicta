@@ -20,6 +20,7 @@ export function TeamSection() {
           fill
           className="object-cover opacity-10 mix-blend-multiply dark:mix-blend-lighten"
           priority={false}
+          loading="lazy"
         />
       </div>
 
@@ -71,6 +72,8 @@ export function TeamSection() {
                     alt="Sunil Yash Kalra"
                     fill
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    priority={false}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent"></div>
                   <div className="flex justify-between items-end">

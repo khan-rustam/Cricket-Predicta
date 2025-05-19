@@ -46,6 +46,8 @@ export function ClientsPartnersSection() {
                   fill
                   className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                   sizes="176px"
+                  loading="lazy"
+                  priority={idx === 0}
                 />
               </div>
               <span className="text-base font-semibold mt-1 text-center line-clamp-1 tracking-wide text-slate-700 dark:text-slate-200">
